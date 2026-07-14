@@ -1,4 +1,4 @@
-### `arkh`
+### `daat`
 
 **Independent researcher. The part of an agent nobody benchmarks: not what it says, but what it *does* when it isn't sure.**
 
