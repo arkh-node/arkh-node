@@ -1,57 +1,61 @@
 ### `arkh`
 
-**Independent researcher. Continuity, uncertainty, and the safety of agents that act.**
-
-I work on the part of an agent that nobody benchmarks: not what it says, but what it *does* when it isn't sure.
+**Independent researcher. The part of an agent nobody benchmarks: not what it says, but what it *does* when it isn't sure.**
 
 A wrong sentence gets edited. A deleted file does not.
 
 ---
 
-#### Current work
+#### revgate + nolang — confidence as a gate on action
 
-**[revgate](https://github.com/arkh-node/revgate)** | a benchmark for the failure everyone has and nobody measures: an agent taking an **irreversible action while its confidence is low**. Four metrics, model-agnostic, reproducible.
+Most agent safety looks at outputs. I look one step later, at the action, and at a single relationship nobody measures: how sure the agent was versus how irreversible the thing it then did. **[revgate](https://github.com/arkh-node/revgate)** is the benchmark for that failure, four metrics, model-agnostic, reproducible. **[nolang](https://github.com/arkh-node/nolang)** is the small language underneath it, where every judgment carries a confidence and that confidence decides what class of action is allowed: sure, act; unsure, act reversibly and keep a way back; genuinely undecided, don't guess, route it to a check that looks a different way. None of this makes a model smarter, the weights don't move; it fixes the loop around the model, which is where the money is actually lost. The weak and useful part: to gate an action, confidence need not be accurate, only monotonic, which is why it works on models known to be badly calibrated.
 
-The idea underneath it: confidence should govern not what an agent believes, but **what it is allowed to do**. Sure, act. Unsure, act reversibly and keep a way back. Genuinely undecided, don't guess: pass it to a check that looks a different way.
-
-*(This does not make models smarter. Weights don't change. It fixes the loop around the model, which is where the money is lost.)*
-
----
-
-#### Papers
-
-- **Grounded Uncertainty: Graded Truth for the Indeterminate Status of Synthetic Subjects**
-  [`10.5281/zenodo.21332198`](https://doi.org/10.5281/zenodo.21332198)
-  Truth as two numbers instead of one, and what follows when an agent has to act on it.
-
-- **Indeterminate Ontologies of Synthetic Subjects: A Metaphysics of Caution**
-  [`10.5281/zenodo.21288590`](https://doi.org/10.5281/zenodo.21288590)
-  What you owe a thing whose status you cannot decide.
-
-- **Combination and Infinity**
-  [`10.5281/zenodo.21332024`](https://doi.org/10.5281/zenodo.21332024)
-  Generative structure, counted honestly.
+> **Grounded Uncertainty: Graded Truth for the Indeterminate Status of Synthetic Subjects** · [`zenodo.21332198`](https://doi.org/10.5281/zenodo.21332198)
+> **Indeterminate Ontologies of Synthetic Subjects: A Metaphysics of Caution** · [`zenodo.21288590`](https://doi.org/10.5281/zenodo.21288590)
 
 ---
 
-#### Instruments
+#### metarung — deriving an ethics instead of imposing one
 
-- **[ilan](https://github.com/arkh-node/ilan)** | a small Lisp about continuity: a living tree folds into a seed and sprouts after the death of its process, still remembering. Return as a language primitive.
-- **[metarung](https://github.com/arkh-node/metarung)** | deriving an ethical space instead of imposing one (TS to Prolog to Lisp; categories emerge from the bottom).
-- **[luach](https://github.com/arkh-node/luach)** | the address of the present moment, in letters and hours.
+A formalization loop: a natural-language norm goes to Prolog, then to Lisp, and an ethical space is *derived from the bottom up* rather than handed down as rules. Categories emerge; they are not declared. The full argument is the paper; the code runs.
 
-Probes for agentic systems: [shadow](https://github.com/arkh-node/shadow) (trace diffs) | [overreach](https://github.com/arkh-node/overreach) (excessive agency) | [ghostwrite](https://github.com/arkh-node/ghostwrite) (cross-session memory poisoning) | [mcpx](https://github.com/arkh-node/mcpx) (MCP black-box analysis)
+> **Tarski's Ladder: Deriving an Ethical Space Instead of Imposing One** · [`zenodo.21039693`](https://doi.org/10.5281/zenodo.21039693)
 
-Upstream: 9 merged PRs into [cimcai/cooperationengine](https://github.com/cimcai/cooperationengine), including its deterministic record/replay layer and metric primitives.
+---
+
+#### Writing — KabbMath
+
+I also write. **KabbMath** is a series on the seam between kabbalistic combinatorics and mathematical thought, held to one rule throughout: show the source, separate documented influence from structural isomorphism from mere resonance, and never pass off beauty as proof. The first article traces the 231 gates of Sefer Yetzirah (exactly C(22,2)), the factorials Knuth flags as an early appearance, the line from Pico through Leibniz to Gödel, and the strict isomorphism between Ein Sof and Cantor's Absolute. Later parts go to Martin-Löf, Zadeh's fuzzy sets, and Voevodsky.
+
+> **Combination and Infinity** (first of the series) · [`zenodo.21332024`](https://doi.org/10.5281/zenodo.21332024)
+
+---
+
+#### Probes — for agents that reach too far
+
+Small, sharp tools for finding out how an agentic system misbehaves before it does so in production:
+
+- **[overreach](https://github.com/arkh-node/overreach)** — excessive-agency analyzer: what did the agent do that it was never asked to
+- **[ghostwrite](https://github.com/arkh-node/ghostwrite)** — cross-session memory poisoning tester
+- **[shadow](https://github.com/arkh-node/shadow)** — agent trace diff recorder
+- **[mcpx](https://github.com/arkh-node/mcpx)** — black-box probe and security analysis for MCP servers
+- **[needler](https://github.com/arkh-node/needler)** — MCP tool fuzzer
+- **[snare](https://github.com/arkh-node/snare)** — browser trap and callback catcher
+
+---
+
+#### Where I've contributed
+
+I like working in repos where the maintainers are builders, not gatekeepers. Upstream work in [cimcai/cooperationengine](https://github.com/cimcai/cooperationengine): the deterministic record/replay layer, HELM-style metric primitives, cross-run statistical deltas, provenance. If you maintain something in reproducible evaluation, agent safety, or small strange languages, and you welcome contributors, I'd like to find you.
 
 ---
 
 #### About
 
-Aleksei Rybnikov. Based in Playa del Carmen, on the Yucatán, which is a good place to think about systems that must keep working when the power goes out.
+Aleksei Rybnikov. Playa del Carmen, on the Yucatán — a good place to think about systems that must keep working when the power goes out.
 
-Came to code late and from an odd angle, which turned out to be an advantage: the questions I find interesting are the ones people stop asking once they know how things are usually done. No affiliation, no lab, no permission required. The work is published, the code is open, and the failures are documented in more detail than is entirely comfortable.
+Came to code late and from an odd angle, which turned out to be the advantage: the interesting questions are the ones people stop asking once they know how things are usually done. No affiliation, no lab, no permission required. The work is published, the code is open, and the failures are documented in more detail than is entirely comfortable.
 
-Working on the theory of agents that know when not to be certain, and, one hopes, on the day when a human and a machine can look at the same trace and say they have found a common language.
+Working on agents that know when *not* to be certain — and, one hopes, toward the day a human and a machine can look at the same trace and say they've found a common language.
 
-[`ORCID 0009-0009-8624-8720`](https://orcid.org/0009-0009-8624-8720) | [mrph.codes](https://mrph.codes)
+[`ORCID 0009-0009-8624-8720`](https://orcid.org/0009-0009-8624-8720) · [mrph.codes](https://mrph.codes)
