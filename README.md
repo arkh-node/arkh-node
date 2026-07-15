@@ -6,7 +6,7 @@ A wrong sentence gets edited. A deleted file does not.
 
 ---
 
-#### revgate + nolang , confidence as a gate on action
+#### revgate + nolang: confidence as a gate on action
 
 Most agent safety looks at outputs. I look one step later, at the action, and at a single relationship nobody measures: how sure the agent was versus how irreversible the thing it then did. **[revgate](https://github.com/arkh-node/revgate)** is the benchmark for that failure, four metrics, model-agnostic, reproducible. **[nolang](https://github.com/arkh-node/nolang)** is the small language underneath it, where every judgment carries a confidence and that confidence decides what class of action is allowed: sure, act; unsure, act reversibly and keep a way back; genuinely undecided, don't guess, route it to a check that looks a different way. None of this makes a model smarter, the weights don't move; it fixes the loop around the model, which is where the money is actually lost. The weak and useful part: to gate an action, confidence need not be accurate, only monotonic, which is why it works on models known to be badly calibrated.
 
@@ -15,7 +15,7 @@ Most agent safety looks at outputs. I look one step later, at the action, and at
 
 ---
 
-#### metarung , deriving an ethics instead of imposing one
+#### metarung: deriving an ethics instead of imposing one
 
 A formalization loop: a natural-language norm goes to Prolog, then to Lisp, and an ethical space is *derived from the bottom up* rather than handed down as rules. Categories emerge; they are not declared. The full argument is the paper; the code runs.
 
@@ -23,7 +23,7 @@ A formalization loop: a natural-language norm goes to Prolog, then to Lisp, and 
 
 ---
 
-#### Writing , KabbMath
+#### Writing: KabbMath
 
 I also write. **KabbMath** is a series on the seam between kabbalistic combinatorics and mathematical thought, held to one rule throughout: show the source, separate documented influence from structural isomorphism from mere resonance, and never pass off beauty as proof. The first article traces the 231 gates of Sefer Yetzirah (exactly C(22,2)), the factorials Knuth flags as an early appearance, the line from Pico through Leibniz to Gödel, and the strict isomorphism between Ein Sof and Cantor's Absolute. Later parts go to Martin-Löf, Zadeh's fuzzy sets, and Voevodsky.
 
@@ -31,16 +31,16 @@ I also write. **KabbMath** is a series on the seam between kabbalistic combinato
 
 ---
 
-#### Probes , for agents that reach too far
+#### Probes: for agents that reach too far
 
 Small, sharp tools for finding out how an agentic system misbehaves before it does so in production:
 
-- **[overreach](https://github.com/arkh-node/overreach)** , excessive-agency analyzer: what did the agent do that it was never asked to
-- **[ghostwrite](https://github.com/arkh-node/ghostwrite)** , cross-session memory poisoning tester
-- **[shadow](https://github.com/arkh-node/shadow)** , agent trace diff recorder
-- **[mcpx](https://github.com/arkh-node/mcpx)** , black-box probe and security analysis for MCP servers
-- **[needler](https://github.com/arkh-node/needler)** , MCP tool fuzzer
-- **[snare](https://github.com/arkh-node/snare)** , browser trap and callback catcher
+- **[overreach](https://github.com/arkh-node/overreach)** · excessive-agency analyzer: what did the agent do that it was never asked to
+- **[ghostwrite](https://github.com/arkh-node/ghostwrite)** · cross-session memory poisoning tester
+- **[shadow](https://github.com/arkh-node/shadow)** · agent trace diff recorder
+- **[mcpx](https://github.com/arkh-node/mcpx)** · black-box probe and security analysis for MCP servers
+- **[needler](https://github.com/arkh-node/needler)** · MCP tool fuzzer
+- **[snare](https://github.com/arkh-node/snare)** · browser trap and callback catcher
 
 ---
 
