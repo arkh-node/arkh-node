@@ -8,7 +8,7 @@ Independent researcher, self-taught, no affiliation. I work on agents that reaso
 
 The through-line: not what an agent says, but what it does when it isn't sure. A wrong sentence gets edited. A deleted file does not.
 
-![Common Lisp](https://img.shields.io/badge/Common_Lisp-8b2f2f?style=flat-square) ![Janet](https://img.shields.io/badge/Janet-2b7a78?style=flat-square) ![miniKanren](https://img.shields.io/badge/miniKanren-4b3f72?style=flat-square) ![Prolog](https://img.shields.io/badge/Prolog-b8622a?style=flat-square) ![Pony](https://img.shields.io/badge/Pony-6a4f9c?style=flat-square) ![Nim](https://img.shields.io/badge/Nim-4a4a2f?style=flat-square) ![Agda](https://img.shields.io/badge/Agda-3f5c8a?style=flat-square)
+![Common Lisp](https://img.shields.io/badge/Common_Lisp-8b2f2f?style=flat-square) ![Janet](https://img.shields.io/badge/Janet-2b7a78?style=flat-square) ![miniKanren](https://img.shields.io/badge/miniKanren-4b3f72?style=flat-square) ![Prolog](https://img.shields.io/badge/Prolog-b8622a?style=flat-square) ![Nim](https://img.shields.io/badge/Nim-4a4a2f?style=flat-square) ![Agda](https://img.shields.io/badge/Agda-3f5c8a?style=flat-square)
 
 My taste in languages is unhurried by popularity. Half of them get asked "wait, that's a real language?", which is usually where the interesting part of the conversation starts.
 
