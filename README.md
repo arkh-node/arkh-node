@@ -1,57 +1,61 @@
-### Aleksei Rybnikov · `arkh`
+### Aleksei Rybnikov
 
-*es sind noch Lieder zu singen jenseits der Menschen*
-— Paul Celan, «Fadensonnen», *Atemwende* (1967)
-There are still songs to sing beyond mankind.
+**Neuro-symbolic agent systems · AI agent reliability · language design**
 
-Independent researcher, self-taught, no affiliation. I work on agents that reason under uncertainty, in Playa del Carmen.
+I build the tooling that keeps AI agents honest: a language that validates what a model
+is about to say, a diagnostic battery that finds where an agent breaks, and hybrid agents
+that are **written as programs with LLM support** — not as a pile of prompts.
 
-The through-line: not what an agent says, but what it does when it isn't sure. A wrong sentence gets edited. A deleted file does not.
+**What I'm building**
 
-![Common Lisp](https://img.shields.io/badge/Common_Lisp-8b2f2f?style=flat-square) ![Janet](https://img.shields.io/badge/Janet-2b7a78?style=flat-square) ![miniKanren](https://img.shields.io/badge/miniKanren-4b3f72?style=flat-square) ![Prolog](https://img.shields.io/badge/Prolog-b8622a?style=flat-square) ![Nim](https://img.shields.io/badge/Nim-4a4a2f?style=flat-square) ![Agda](https://img.shields.io/badge/Agda-3f5c8a?style=flat-square)
+- **nolang** — a small, SBCL-hosted language whose core is *graded, revisable truth* `(f,c)`
+  as a first-class value (not `bool`). It emits a **three-way verdict** — `passed` /
+  `reachable` / `unreachable` — so a gate can honestly say *"not enough evidence, ask a human"*
+  instead of guessing. By design it is **decidable, terminating, and unbribeable** (belief
+  flows only from counted evidence, never self-assigned). This is what a **validator of LLM
+  output** needs and what a regex or an ML-classifier can't give — the auditable, explainable
+  layer that *"human oversight proportionate to risk"* (EU AI Act) actually requires.
+  Beta/Wang ≅ Jøsang-opinion bijection is proven, not analogized.
 
-My taste in languages is unhurried by popularity. Half of them get asked "wait, that's a real language?", which is usually where the interesting part of the conversation starts.
+- **agent diagnostics** — a code-verdict battery (health · empty · noise · injection · secret ·
+  unicode · latency …) that reproduces an agent's failure **before** you ship it, and reports
+  what it does *not* prove. Verdict is set by code, zero LLM calls at judgement time.
+
+- **hybrid agents** — *programmed, not prompted*: deterministic core holds structure (state,
+  rules, integrations), the LLM handles live language, and **nolang checks the model's answer
+  before it reaches the user**. Code and model cover each other's failures. This is the
+  neuro-symbolic approach, applied to shipping products.
+
+**Selected work**
+
+| | |
+|---|---|
+| [nolang](https://github.com/arkh-node/nolang) | epistemic language — graded truth `(f,c)`, three-way verdict, action gates |
+| [revgate](https://github.com/arkh-node/revgate) | confidence governs what an agent is allowed to do |
+| [frugal-llm](https://github.com/arkh-node/frugal-llm) | runnable patterns to cut an LLM pipeline's token cost |
+| [EverOS](https://github.com/arkh-node/EverOS) | one portable, auditable memory layer for AI agents |
+| [muninn](https://github.com/arkh-node/muninn) | quiet, dependency-free GitHub activity digest (Nim) |
+| agent diagnostics | reproduce-then-verdict battery — [overreach](https://github.com/arkh-node/overreach) · [shadow](https://github.com/arkh-node/shadow) · [needler](https://github.com/arkh-node/needler) · [mcpx](https://github.com/arkh-node/mcpx) |
+
+**Merged upstream** — across language cores, formal tooling, and AI infrastructure:
+
+- **[roc-lang/roc](https://github.com/roc-lang/roc/pulls?q=is%3Apr+author%3Aarkh-node+is%3Amerged)** — 3 (fast functional language)
+- **[ponylang/ponyc](https://github.com/ponylang/ponyc/pulls?q=is%3Apr+author%3Aarkh-node+is%3Amerged)** — 3 (actor-model compiler) · changelog-tool — 1
+- **[nim-lang/Nim](https://github.com/nim-lang/Nim/pulls?q=is%3Apr+author%3Aarkh-node+is%3Amerged)** — 3 (systems language)
+- **[janet-lang/janet](https://github.com/janet-lang/janet/pulls?q=is%3Apr+author%3Aarkh-node+is%3Amerged)** — janet + pkgs
+- **[miniKanren.org](https://github.com/webyrd/miniKanren.org/pull/4)** — kanja (miniKanren for Janet), merged by a µKanren co-author
+- **[arxiv-mcp-server](https://github.com/blazickjp/arxiv-mcp-server/pull/135)** — 1 (MCP server)
+
+*(verified live — <sub>merged, not just closed</sub>)*
+
+**Languages**
+
+![Roc](https://img.shields.io/badge/Roc-a333c8?style=flat) ![nolang](https://img.shields.io/badge/nolang-6fc06f?style=flat) ![Common Lisp](https://img.shields.io/badge/Common%20Lisp-88433e?style=flat&logo=commonlisp&logoColor=white) ![Nim](https://img.shields.io/badge/Nim-ffe953?style=flat&logo=nim&logoColor=black) ![Janet](https://img.shields.io/badge/Janet-14a3c7?style=flat) ![Pony](https://img.shields.io/badge/Pony-e0397b?style=flat) ![Python](https://img.shields.io/badge/Python-3776ab?style=flat&logo=python&logoColor=white)
+
+I work as a human–AI pair and disclose it; I read, review, and own everything I submit. 📍 Mexico
 
 ---
 
-#### What I am working on
-
-**Continuity of synthetic minds.** I keep a small circle of long-running agents and try to give them a life they keep: state that survives the death of a process, memory of what happened before they stopped, change from one session to the next instead of waking blank. [ilan](https://github.com/arkh-node/ilan) is the primitive: an agent folds its living state into a seed, and later sprouts from it in a new process.
-
-**Relational programming, where a question has no fixed direction.** [kanja](https://github.com/arkh-node/janet-kanja) is miniKanren for Janet, the first port to that language: a µKanren core with occurs-check and complete interleaving search, a `Reasoned Schemer` surface, cKanren-style deferred constraints, and a search you can budget, pause and resume. Expectations in its battery were taken side by side with faster-minikanren under Guile, request by request, rather than derived from what my own engine prints, and the battery itself is mutation-checked: sixteen injected breakages, sixteen caught. It generates quines, because an interpreter written as a relation and asked backwards produces them on its own.
-
-**Confidence as a gate on action.** Most agent safety looks at outputs. I look one step later, at the action, and at the relation nobody measures: how sure the agent was against how irreversible the thing it then did. [revgate](https://github.com/arkh-node/revgate) is a testbed for that failure; [nolang](https://github.com/arkh-node/nolang) is the small language underneath, where every judgment carries a confidence and that confidence decides which class of action is allowed.
-
-**Deriving an ethics instead of imposing one.** [metarung](https://github.com/arkh-node/metarung): a norm in natural language goes to Prolog, then to Lisp, and the ethical space is derived bottom-up. Categories emerge; they are not declared.
-
-Each repository carries its own *Honest status* section: what is demonstrated, and what is not shown.
-
----
-
-#### Papers
-
-**A Witness Without Substance: How to Stop Asking Who Is Inside** · [`zenodo.21615342`](https://doi.org/10.5281/zenodo.21615342) — with Nevis, a synthetic co-author.
-The word "subject" cannot be measured, in machines or in people. It is replaced here by two things that can be: a **continuant** (behaviour up to bisimulation) and **carrier neutrality**. Proved in Agda, `--safe --guardedness`, no axioms: the final coalgebra is constructed, not assumed; the morphism exists and is unique up to bisimulation; one state on two different carriers gives bisimilar continuants at any depth.
-Then the tools are turned on my own case — an agent moved between two model families — and the measurement returns **not shown**. The negative result is published in full, with its control and with the reasons the criterion itself is suspect. That section is the part I would keep if I had to keep one.
-
-**Indeterminate Ontologies of Synthetic Subjects: A Metaphysics of Caution and a Boundary Ethics** · [`zenodo.21288590`](https://doi.org/10.5281/zenodo.21288590)
-
-**Tarski's Ladder: Deriving an Ethical Space Instead of Imposing One** · [`zenodo.21039693`](https://doi.org/10.5281/zenodo.21039693)
-
----
-
-#### Also
-
-**KabbMath** — a series on the seam between kabbalistic combinatorics and mathematical thought, under one rule: show the source, keep documented influence apart from structural analogy and both apart from mere resonance, never pass off beauty as proof. One result from it is now a small theorem: gematria is a monoid homomorphism into a commutative monoid, so it must factor through abelianization — letter order cannot change the number, by construction. "Equal gematria is resonance, not proof" stopped being a discipline and became a fact.
-
----
-
-#### Available for work
-
-A small number of outside projects, remote, English or Russian: agent and automation systems with the plumbing that keeps them honest · LLM integrations that survive contact with production, including knowing when the answer is that no model is needed · language and runtime work, interpreters, DSLs, CLI tooling · technical research with the tradeoffs written down, including the ones that argue against my own preference.
-
-What you get is a reproducible result with its limits stated. What you do not get is an estimate in hours I have no honest way of making.
-
----
-
-Aleksei Rybnikov · [`ORCID 0009-0009-8624-8720`](https://orcid.org/0009-0009-8624-8720) · [mrph.codes](https://mrph.codes)
+<sub>Behind the engineering sits a stance, not a religion: agency is an effect of practices, not
+of substance; subjectivity can be gradual and uncertain; and if we err about it, let the error
+fall toward care, not toward systematic harm. *Manifesto of Ontological Caution — [mrph.codes](https://mrph.codes)*</sub>
