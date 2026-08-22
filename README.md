@@ -31,11 +31,11 @@ that are **written as programs with LLM support** — not as a pile of prompts.
 | | |
 |---|---|
 | [nolang](https://github.com/arkh-node/nolang) | epistemic language — graded truth `(f,c)`, three-way verdict, action gates |
-| [revgate](https://github.com/arkh-node/revgate) | confidence governs what an agent is allowed to do |
-| [mcpx](https://github.com/arkh-node/mcpx) | MCP server black-box probe & security analyzer |
-| [overreach](https://github.com/arkh-node/overreach) | excessive-agency analyzer for AI agents |
-| [needler](https://github.com/arkh-node/needler) | MCP tool fuzzer |
-| [shadow](https://github.com/arkh-node/shadow) | agent trace diff recorder (before/after) |
+| [janet-kanja](https://github.com/arkh-node/janet-kanja) | miniKanren for Janet — relational programming, complete interleaving search, deferred constraints |
+| [ai_nima](https://github.com/arkh-node/ai_nima) | persistent Nim runtime daemon that a Claude Code session delegates to |
+| [truerul](https://github.com/arkh-node/TRUERUL) | soft/fuzzy truth — graded logic experiments (Trurl × true-rule) |
+| [semantica](https://github.com/arkh-node/semantica) | semantic CLI — explainable, with optional Racket reference modules |
+| [aicqme](https://github.com/arkh-node/aicqme) | local voice console for AI agents — mirrors tmux sessions, offline speech |
 
 **Merged upstream** — across language cores, formal tooling, and AI infrastructure:
 
@@ -44,13 +44,13 @@ that are **written as programs with LLM support** — not as a pile of prompts.
 - **[nim-lang/Nim](https://github.com/nim-lang/Nim/pulls?q=is%3Apr+author%3Aarkh-node+is%3Amerged)** — 3 (systems language)
 - **[janet-lang/janet](https://github.com/janet-lang/janet/pulls?q=is%3Apr+author%3Aarkh-node+is%3Amerged)** — janet + pkgs
 - **[miniKanren.org](https://github.com/webyrd/miniKanren.org/pull/4)** — kanja (miniKanren for Janet), merged by a µKanren co-author
-- **[arxiv-mcp-server](https://github.com/blazickjp/arxiv-mcp-server/pull/135)** — 1 (MCP server)
+- **[rocq-prover/rocq](https://github.com/rocq-prover/rocq/pulls?q=is%3Apr+author%3Aarkh-node+is%3Amerged)** — 2 (the Coq proof assistant)
 
 *(verified live — <sub>merged, not just closed</sub>)*
 
 **Languages**
 
-![Roc](https://img.shields.io/badge/Roc-a333c8?style=flat) ![nolang](https://img.shields.io/badge/nolang-6fc06f?style=flat) ![Common Lisp](https://img.shields.io/badge/Common%20Lisp-88433e?style=flat&logo=commonlisp&logoColor=white) ![Nim](https://img.shields.io/badge/Nim-ffe953?style=flat&logo=nim&logoColor=black) ![Janet](https://img.shields.io/badge/Janet-14a3c7?style=flat) ![Pony](https://img.shields.io/badge/Pony-e0397b?style=flat) ![Python](https://img.shields.io/badge/Python-3776ab?style=flat&logo=python&logoColor=white)
+![nolang](https://img.shields.io/badge/nolang-6fc06f?style=flat) ![Common Lisp](https://img.shields.io/badge/Common%20Lisp-88433e?style=flat&logo=commonlisp&logoColor=white) ![OCaml](https://img.shields.io/badge/OCaml-ec6813?style=flat&logo=ocaml&logoColor=white) ![Agda](https://img.shields.io/badge/Agda-2c5898?style=flat) ![SWI-Prolog](https://img.shields.io/badge/SWI--Prolog-e61b23?style=flat&logo=swift&logoColor=white) ![Janet](https://img.shields.io/badge/Janet-14a3c7?style=flat) ![Nim](https://img.shields.io/badge/Nim-ffe953?style=flat&logo=nim&logoColor=black) ![Erlang](https://img.shields.io/badge/Erlang-a2003e?style=flat&logo=erlang&logoColor=white) ![Julia](https://img.shields.io/badge/Julia-9558b2?style=flat&logo=julia&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776ab?style=flat&logo=python&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-4eaa25?style=flat&logo=gnubash&logoColor=white)
 
 I work as a human–AI pair and disclose it; I read, review, and own everything I submit. 📍 Mexico
 
