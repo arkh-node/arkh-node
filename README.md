@@ -42,7 +42,8 @@ that are **written as programs with LLM support** — not as a pile of prompts.
 - **[roc-lang/roc](https://github.com/roc-lang/roc/pulls?q=is%3Apr+author%3Aarkh-node+is%3Amerged)** — 4 (fast functional language) · *actively contributing*
 - **[rocq-prover/rocq](https://github.com/rocq-prover/rocq/pulls?q=is%3Apr+author%3Aarkh-node+is%3Amerged)** — 2 (the Coq proof assistant) · *active*
 - **[janet-lang/janet](https://github.com/janet-lang/janet/pulls?q=is%3Apr+author%3Aarkh-node+is%3Amerged)** — janet + pkgs · **[miniKanren.org](https://github.com/webyrd/miniKanren.org/pull/4)** — kanja (miniKanren for Janet), merged by a µKanren co-author
-- earlier: **[nim-lang/Nim](https://github.com/nim-lang/Nim/pulls?q=is%3Apr+author%3Aarkh-node+is%3Amerged)** — 3 · **[ponylang/ponyc](https://github.com/ponylang/ponyc/pulls?q=is%3Apr+author%3Aarkh-node+is%3Amerged)** — 3 (+changelog-tool 1)
+- **[nim-lang/Nim](https://github.com/nim-lang/Nim/pulls?q=is%3Apr+author%3Aarkh-node+is%3Amerged)** — 3 (systems language, growing fast)
+- earlier: **[ponylang/ponyc](https://github.com/ponylang/ponyc/pulls?q=is%3Apr+author%3Aarkh-node+is%3Amerged)** — 3 (+changelog-tool 1)
 
 *(verified live — <sub>merged, not just closed</sub>)*
 
