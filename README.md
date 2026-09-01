@@ -49,9 +49,9 @@ that are **written as programs with LLM support** — not as a pile of prompts.
 
 **Languages**
 
-![nolang](https://img.shields.io/badge/nolang-6fc06f?style=flat) ![Common Lisp](https://img.shields.io/badge/Common%20Lisp-88433e?style=flat&logo=commonlisp&logoColor=white) ![OCaml](https://img.shields.io/badge/OCaml-ec6813?style=flat&logo=ocaml&logoColor=white) ![Agda](https://img.shields.io/badge/Agda-2c5898?style=flat) ![SWI-Prolog](https://img.shields.io/badge/SWI--Prolog-e61b23?style=flat&logo=swift&logoColor=white) ![Janet](https://img.shields.io/badge/Janet-14a3c7?style=flat) ![Nim](https://img.shields.io/badge/Nim-ffe953?style=flat&logo=nim&logoColor=black) ![Erlang](https://img.shields.io/badge/Erlang-a2003e?style=flat&logo=erlang&logoColor=white) ![Julia](https://img.shields.io/badge/Julia-9558b2?style=flat&logo=julia&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776ab?style=flat&logo=python&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-4eaa25?style=flat&logo=gnubash&logoColor=white)
+![nolang](https://img.shields.io/badge/nolang-6fc06f?style=flat) ![Common Lisp](https://img.shields.io/badge/Common%20Lisp-88433e?style=flat&logo=commonlisp&logoColor=white) ![SWI-Prolog](https://img.shields.io/badge/SWI--Prolog-e61b23?style=flat&logo=swift&logoColor=white) ![Janet](https://img.shields.io/badge/Janet-14a3c7?style=flat) ![Nim](https://img.shields.io/badge/Nim-ffe953?style=flat&logo=nim&logoColor=black) ![Erlang](https://img.shields.io/badge/Erlang-a2003e?style=flat&logo=erlang&logoColor=white) ![Julia](https://img.shields.io/badge/Julia-9558b2?style=flat&logo=julia&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776ab?style=flat&logo=python&logoColor=white) 
 
-I work as a human–AI pair and disclose it; I read, review, and own everything I submit. 📍 Mexico
+I work as a human–AI pair and disclose it; I read, review, and own everything I submit. Mexico
 
 ---
 
